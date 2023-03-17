@@ -44,7 +44,7 @@ dictFourthLayerMaterias={
 }
 
 dictFifthLayerProfesores={
-    ("profesor", "profesores"): ["En el siguiente link puedes encontrar la información de los profesores: https://www.tec.mx/es/estudiar-en-tec/carreras"],
+    ("profesor", "profesores"): ["En el siguiente link puedes encontrar la información de los profesores: https://www.tec.mx/es/estudiar-en-tec/profesores"],
 }
 
 
@@ -85,6 +85,16 @@ def responderPregunta(inputText):
                             for key3 in dictThirdLayerCarreras:
                                 for word3 in key3:
                                     if word3 in inputText:
+                                        for key4 in dictFourthLayerMaterias:
+                                            for word4 in key4:
+                                                if word4 in inputText:
+                                                    for key5 in dictFifthLayerProfesores:
+                                                        for word5 in key5:
+                                                            if word5 in inputText:
+                                                                print(dictFifthLayerProfesores[key5])
+                                                                return
+                                                    print(dictFourthLayerMaterias[key4])
+                                                    return
                                         print(dictThirdLayerCarreras[key3])
                                         return
                             print(dictSecondLayerCarreras[key2])
