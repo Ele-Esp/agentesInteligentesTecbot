@@ -64,13 +64,13 @@ def main():
         else:
             responderPregunta(inputText)
 
-def searchInDict(inputText, dict):
-    #dict has a touple of words as key and a string as value
-    for key in dict:
-        for word in key:
-            if word in inputText:
-                return key
-    return None
+# def searchInDict(inputText, dict):
+#     #dict has a touple of words as key and a string as value
+#     for key in dict:
+#         for word in key:
+#             if word in inputText:
+#                 return key
+#     return None
 
 
 def responderPregunta(inputText):
