@@ -39,6 +39,13 @@ dictThirdLayerCarreras={
     ("5to semestre", "5°", "5", "quinto semestre", "quinto" ): ["Puedes encontrar la información de las carreras en el siguiente link: https://www.tec.mx/es/estudiar-en-tec/carreras"],
 
 }
+dictFourthLayerMaterias={
+    ("Matemáticas", "matematicas", "mate"):["La materia de introducción a las matemáticas es una materia que se imparte en el primer semestre de la carrera de Matemáticas. En esta materia se estudian los conceptos básicos de álgebra, geometría y trigonometría."],
+}
+
+dictFifthLayerProfesores={
+    ("profesor", "profesores"): ["En el siguiente link puedes encontrar la información de los profesores: https://www.tec.mx/es/estudiar-en-tec/carreras"],
+}
 
 
 def main():
