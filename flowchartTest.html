@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>py2flowchart</title>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/flowchart/1.14.0/flowchart.min.js"></script>
+    </head>
+    <body>
+        <div id="canvas"></div>
+        <pre id="code"></pre>
+        <script>
+            $("#code").html(code);
+            code= `
+start=>start: start
+operation1=>operation: context = ""
+operation2=>operation: global context
+operation3=>operation: inputText= inputText + " " + context
+condition4=>condition: for key in dictFirstLayer|past
+condition5=>condition: for word in key|past
+condition6=>condition: if word in inputText
+condition7=>condition: for key2 in dictSecondLayerCarreras|past
+condition8=>condition: for word2 in key2|past
+condition9=>condition: if word2 in inputText
+condition10=>condition: for key3 in dictThirdLayerCarreras|past
+condition11=>condition: for word3 in key3|past
+condition12=>condition: if word3 in inputText
+condition13=>condition: for key4 in dictFourthLayerMaterias|past
+condition14=>condition: for word4 in key4|past
+condition15=>condition: if word4 in inputText
+condition16=>condition: for key5 in dictFifthLayerProfesores|past
+condition17=>condition: for word5 in key5|past
+condition18=>condition: if word5 in inputText
+inputoutput19=>inputoutput: print(str(dictFifthLayerProfesores[key5]) )
+operation20=>operation: return
+operation21=>operation: pass
+inputoutput22=>inputoutput: print(str(dictFourthLayerMaterias[key4]) )
+operation23=>operation: return
+operation24=>operation: pass
+condition25=>condition: for key4 in dictThirdLayerBecas|past
+condition26=>condition: for word4 in key4|past
+condition27=>condition: if word4 in inputText
+inputoutput28=>inputoutput: print(str(dictThirdLayerBecas[key4]) )
+operation29=>operation: return
+operation30=>operation: pass
+inputoutput31=>inputoutput: print(str(dictThirdLayerCarreras[key3]) )
+operation32=>operation: return
+operation33=>operation: pass
+condition34=>condition: for key3 in dictSecondLayerServicios|past
+condition35=>condition: for word3 in key3|past
+condition36=>condition: if word3 in inputText
+inputoutput37=>inputoutput: print(str(dictSecondLayerServicios[key3]) )
+operation38=>operation: return
+operation39=>operation: pass
+condition40=>condition: for key3 in dictSecondLayerColegiaturas|past
+condition41=>condition: for word3 in key3|past
+condition42=>condition: if word3 in inputText
+inputoutput43=>inputoutput: print(str(dictSecondLayerColegiaturas[key3]) )
+operation44=>operation: return
+operation45=>operation: pass
+condition46=>condition: for key3 in dictSecondLayerInscripciones|past
+condition47=>condition: for word3 in key3|past
+condition48=>condition: if word3 in inputText
+inputoutput49=>inputoutput: print(str(dictSecondLayerInscripciones[key3]) )
+operation50=>operation: return
+operation51=>operation: pass
+inputoutput52=>inputoutput: print(str(dictSecondLayerCarreras[key2]) )
+operation53=>operation: return
+operation54=>operation: pass
+condition55=>condition: for key2 in dictSecondLayerBecas|past
+condition56=>condition: for word2 in key2|past
+condition57=>condition: if word2 in inputText
+inputoutput58=>inputoutput: print(str(dictSecondLayerBecas[key2]) )
+operation59=>operation: return
+operation60=>operation: pass
+condition61=>condition: for key2 in dictSecondLayerCampus|past
+condition62=>condition: for word2 in key2|past
+condition63=>condition: if word2 in inputText
+inputoutput64=>inputoutput: print(str(dictSecondLayerCampus[key2]) )
+operation65=>operation: return
+operation66=>operation: pass
+inputoutput67=>inputoutput: print(str(dictFirstLayer[key]) )
+operation68=>operation: return
+operation69=>operation: pass
+inputoutput70=>inputoutput: print("\nTECbot: No encontré la información que buscabas... Estoy comunicándote con un agente... Espera un momento por favor...\n", end="")
+end=>end: end
+start->operation1
+operation1->operation2
+operation2->operation3
+operation3->condition4
+condition4(yes)->condition5
+condition5(yes)->condition6
+condition6(yes)->condition7
+condition7(yes)->condition8
+condition8(yes)->condition9
+condition9(yes)->condition10
+condition10(yes)->condition11
+condition11(yes)->condition12
+condition12(yes)->condition13
+condition13(yes)->condition14
+condition14(yes)->condition15
+condition15(yes)->condition16
+condition16(yes)->condition17
+condition17(yes)->condition18
+condition18(yes)->inputoutput19
+inputoutput19->operation20
+condition18(no)->operation21
+operation20->condition17
+operation21->condition17
+condition17(no)->condition16
+condition16(no)->inputoutput22
+inputoutput22->operation23
+condition15(no)->operation24
+operation23->condition14
+operation24->condition14
+condition14(no)->condition13
+condition13(no)->condition25
+condition25(yes)->condition26
+condition26(yes)->condition27
+condition27(yes)->inputoutput28
+inputoutput28->operation29
+condition27(no)->operation30
+operation29->condition26
+operation30->condition26
+condition26(no)->condition25
+condition25(no)->inputoutput31
+inputoutput31->operation32
+condition12(no)->operation33
+operation32->condition11
+operation33->condition11
+condition11(no)->condition10
+condition10(no)->condition34
+condition34(yes)->condition35
+condition35(yes)->condition36
+condition36(yes)->inputoutput37
+inputoutput37->operation38
+condition36(no)->operation39
+operation38->condition35
+operation39->condition35
+condition35(no)->condition34
+condition34(no)->condition40
+condition40(yes)->condition41
+condition41(yes)->condition42
+condition42(yes)->inputoutput43
+inputoutput43->operation44
+condition42(no)->operation45
+operation44->condition41
+operation45->condition41
+condition41(no)->condition40
+condition40(no)->condition46
+condition46(yes)->condition47
+condition47(yes)->condition48
+condition48(yes)->inputoutput49
+inputoutput49->operation50
+condition48(no)->operation51
+operation50->condition47
+operation51->condition47
+condition47(no)->condition46
+condition46(no)->inputoutput52
+inputoutput52->operation53
+condition9(no)->operation54
+operation53->condition8
+operation54->condition8
+condition8(no)->condition7
+condition7(no)->condition55
+condition55(yes)->condition56
+condition56(yes)->condition57
+condition57(yes)->inputoutput58
+inputoutput58->operation59
+condition57(no)->operation60
+operation59->condition56
+operation60->condition56
+condition56(no)->condition55
+condition55(no)->condition61
+condition61(yes)->condition62
+condition62(yes)->condition63
+condition63(yes)->inputoutput64
+inputoutput64->operation65
+condition63(no)->operation66
+operation65->condition62
+operation66->condition62
+condition62(no)->condition61
+condition61(no)->inputoutput67
+inputoutput67->operation68
+condition6(no)->operation69
+operation68->condition5
+operation69->condition5
+condition5(no)->condition4
+condition4(no)->inputoutput70
+inputoutput70->end
+
+`;
+            chart = flowchart.parse(code);
+            chart.drawSVG('canvas', {"line-width": 1, "arrow-end": "open"});
+        </script>
+    </body>
+</html>
