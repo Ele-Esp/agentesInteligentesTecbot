@@ -1,17 +1,3 @@
-"""
-TECbot - Chatbot para el Tecnológico de Monterrey
-    
-La función principal va a llevar una función llamada responderPregunta(inputText) que va a tomar de argumento el string que dé el usuario de la pregunta.
-Buscará con un for word in pregunta para cada tupla del diccionario de la primera capa, si encuentra algo, busca otro for word en cada diccionario que diga secondLayer si encuentra algo, se sigue así hasta la capa 5.
-Si no encuentra algo en alguna capa, responde hasta donde se quedó, si no encuentra algo desde la capa 1, pasa a un agente.
-En cada if debe regresar el input al usuario preguntando si quiere saber algo más de la información que tiene además de responder, y se debe buscar desde esa capa.
-    
-Alan Uriel Merlan Esquivel - A01656612
-Héctor Hibran Tapia Fernández - A01661114
-Elías Eduardo Rodríguez Hernández - A01654900 
-    
-"""
-
 
 context = ""
 
@@ -23,6 +9,7 @@ dictFirstLayer = {
     ("Campus", "campus"): ["TECbot: Los campus que ofrece el Tecnológico de Monterrey son: Campus Monterrey, Campus Santa Fe, Campus Querétaro, Campus Guadalajara, Campus Puebla, Campus León, [...]"],
     ("Colegiaturas", "colegiaturas",): ["TECbot: Las colegiaturas que ofrece el Tecnológico de Monterrey son: $ 15,000.00, $ 16,000.00, $ 17,000.00, $ 18,000.00, $ 19,000.00, $ 20,000.00, [...]"],
     ("Inscripciones", "inscripciones"): ["TECbot: Las inscripciones que ofrece el Tecnológico de Monterrey son en Abril y Junio, y de Octubre a Diciembre"],
+    ("Humano", "humana", "persona", "real"):["TECbot: Yo no soy una persona real, soy un asistente virtual que te puede ayudar a encontrar información sobre el Tecnológico de Monterrey. ¿En qué te puedo ayudar?"],
 }
 
 dictSecondLayerCarreras = {
@@ -177,45 +164,6 @@ def main():
             print(f"\nTECbot: Aségurate de escribir palabras clave capa por capa mientras vayas avanzando. (Por ejemplo: Carrera - Ciencia de Datos - Primer Semestre)\n")
             responderPregunta(inputText)
             
-            
-""" 
-EJEMPLO DE EJECUCIÓN 
-
-PRUEBA 1 HASTA LA TERCERA CAPA
-
-TECbot: ¡Hola, soy TECbot! ¿Cuál es tu nombre?
-
-INPUT -> Tú: Hibran
-
-TECbot: ¡Hola Hibran, gusto en conocerte! Escribe alguna de las siguientes opciones.    
- 
- - Carreras
- - Cursos
- - Becas
- - Servicios
- - Campus
- - Colegiaturas
- - Inscripciones
-
-- Contactar Agente
-- Salir
-
-INPUT -> Hibran: colegiaturas
-
-TECbot: Aségurate de escribir palabras clave capa por capa mientras vayas avanzando. (Por ejemplo: Carrera - Ciencia de Datos - Primer Semestre)
-
-TECbot: Las colegiaturas que ofrece el Tecnológico de Monterrey son: $ 15,000.00, $ 16,000.00, $ 17,000.00, $ 18,000.00, $ 19,000.00, $ 20,000.00, ...
-INPUT -> Hibran: ¿Podrías darme información de la Carrera en Ciencia de Datos del Primer Semestre?
-
-TECbot: Aségurate de escribir palabras clave capa por capa mientras vayas avanzando. (Por ejemplo: Carrera - Ciencia de Datos - Primer Semestre)
-
-TECbot: Para primer semestre encontrarás aquí la información: https://www.tec.mx/es/estudiar-en-tec/carreras
-INPUT -> Hibran: Salir
-
-TECbot: ¡Gracias por chatear conmigo Hibran, nos vemos pronto!
-
-"""
-
 
 if __name__ == '__main__':
     main()
